@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#map_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+#map {
+  height: 400px;
+  width: 50%;
+  /*margin: 20% 20% 30% 30%;*/
+  border-radius: 8%;
+}
+
+body {
+  background-image: url("https://images3.alphacoders.com/151/151005.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  overflow: hidden;
+
+}
+
+.input_container{
+  /*border: 2px solid rgba(255,255,255, .15);*/
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+.input{
+  width: 30vw;
+  font-size: 1em;
+  list-style: none;
+  text-align: center;
+  background-color:rgba(0, 0, 0, 0);
+   color:black;
+   height:30px;
+   transition:height 1s;
+   -webkit-transition:height 1s;
+  
+}
+/*input{
+
+};*/
+
+.button{
+  background-color: #f2b663;
+  border-color:#f2b663;
+  font-size: 20px;
+  border-radius: 40%;
+}
+
+.button_container {
+text-align: center;
+display:flex;
+justify-content: center;
+padding: .6%;
+
+
+}
+
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: ##847767;
+  font-size: 1.5em;
+  list-style: none;
+  padding: 1%;
+  padding-top: 10%
+}
+
+h1 {
+  text-align: center;
+}
