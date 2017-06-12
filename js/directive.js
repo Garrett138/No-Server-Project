@@ -1,10 +1,12 @@
-angular.module("myApp").directive('backButton', ['$window', function($window) {
-        return {
-            restrict: 'A',
-            link: function (scope, elem, attrs) {
-                elem.bind('click', function () {
-                    $window.history.back();
-                });
-            }
-        };
-    }]);
+angular.module("myApp").directive("backButton", function (){
+    return {
+      templateUrl: 'backButton.html'
+
+    }
+})
+
+.directive("footBar", function(){
+  return {
+    templateUrl: 'footBar.html'
+  }
+})

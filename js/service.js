@@ -40,14 +40,17 @@ angular.module('myApp').service('service', function($http) {
               content: '<p>You Are Here</p>'
             })
 
-            // var markerContent = ""'<h1>'cur.RecAreaName'</h1>' + '<p>'cur.RecAreaName'</p>'""
+
 
             marker.addListener('click', function() {
               infoWindow.open(map, marker)
             })
             arr.forEach(function(cur) {
+              var markerContent = '<h1>' + cur.RecAreaName + '</h1><br><p>' + cur.RecAreaDescription + '</p><br><p>' +
+              cur.RecAreaPhone + '</p>'
+              // var markerContent = '<info-window-directive name="cur.RecAreaName" description="cur.RecAreaDescription"></info-window-directive>'
               var curInfoWindow = new window.google.maps.InfoWindow({
-                content: cur.RecAreaDescription
+                content: markerContent
 
               })
 
@@ -61,17 +64,21 @@ angular.module('myApp').service('service', function($http) {
 
 
                 },
-                label: cur.RecAreaName,
+                // label: cur.RecAreaName,
                 animation: google.maps.Animation.DROP
+
 
               })
               curMarker.addListener('click', function() {
                 curInfoWindow.open(map, curMarker,)
               })
+
             })
           })
       })
   }
+
+
 
   this.getAddress = function(address) {
     return $http({

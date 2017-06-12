@@ -11,7 +11,16 @@ angular.module("myApp", ["ui.router"])
         templateUrl: "map.html",
         controller: "mapCtrl"
       })
-
+      .state('moreInfo', {
+        url: '/moreInfo/',
+        templateUrl: "moreInfo.html",
+        controller:"infoCtrl"
+      })
+      .state('footBar', {
+        url: '/footBar/',
+        templateUrl: "footBar.html",
+        
+      })
       $urlRouterProvider
             .otherwise('/');
     });
