@@ -74,7 +74,15 @@ angular.module('myApp').service('service', function($http) {
               })
 
             })
+            google.maps.event.addListener(map, "bounds_changed", function(){
+              var newMap = document.getElementById("map")
+              newMap.style.borderRadius = "40px";
+              newMap.style.border = "5px solid #6C5C14"
+              newMap.style.boxShadow = "0 0 3pt 3pt #6C5C14"
+            });
+            return map;
           })
+          return map;
       })
   }
 

@@ -1,13 +1,15 @@
-
 <header class="header"> </header>
 
+<form ng-submit="goToMap(zipCode)">
+  <div class="input_container">
+    <input type="text" class="input" placeholder="Zip Code" ng-model="zipCode">
+  </div>
 
-<div class="input_container">
-  <input type="text"  class="input" placeholder="Zip Code" ng-model="zipCode">
-</div>
 
-<div class="button_container">
-  <button ng-click="goToMap(zipCode)" class="button">-Submit- </button>
-</div>
+  <div class="button_container">
+    <button ng-click="goToMap(zipCode)" class="button">-Search-</button>
+  </div>
+
+</form>
 
 <!-- <div id="map"></div> -->
